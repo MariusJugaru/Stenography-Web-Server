@@ -1,0 +1,33 @@
+{% extends "_base.html" %}
+{% block title %}Encode{% endblock %}
+{% block text %}
+
+
+<FORM method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+
+    {% for error in form.photo.errors %}
+        <span style="color: rgb(255, 60, 60);">{{ error }}</span>
+    {% endfor %}
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            {{ form.photo(class="form-control")}}
+        </div>
+        <div class="col-auto">
+            <input type="text" class="form-control" name="text">
+        </div>
+        <div class="col-auto" >
+            {{ form.submit(class="btn btn-succes" )}}
+        </div>
+    </div>
+
+    {% if file_url %}
+        <div class="mt-5">
+            <img src="{{ file_url }}" style="width: 400px;">
+        </div>
+    {% endif %}
+</FORM>
+{% endblock %}
+
+{%block main_title %}Homepage{% endblock %}

@@ -1,0 +1,6 @@
+Stenography Web Server
+This web server allows you to encode text into a PNG image and decode it back.
+	Running the server: Start the server with python server.py.
+	Encoding: In the Encode tab, upload a PNG image and input the text you want to encode. The text will be hidden within the image.
+	Encoded: Shows the last encoded image.
+	Decoding: In the Decode tab, upload the image with the encoded text, and the hidden message will be revealed.

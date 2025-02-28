@@ -1,0 +1,8 @@
+{% extends "_base.html" %}
+{% block title %}Encoded{% endblock %}
+{% block text %}
+{% if file_url %}
+    <img src="{{ file_url }}" style="width: 400px;">
+{% endif %}
+{%block main_title %}Encoded{% endblock %}
+{% endblock %}
